@@ -1,6 +1,6 @@
 // 1. IMPORTAR LIBRERIAS O VARIABLES EXTERNAS
 const express = require('express'); // esto es un import (nos traemos código de fuera del archivo)
-const { roomRouter } = require('./src/routes/bike.routes');
+const { roomRouter } = require('./src/routers/room.routers');
 
 
 // 2. CONFIGURACIÓN DE LA APLICACIÓN
@@ -20,9 +20,8 @@ app.get('/', (request, response) => {
     });
 });
 
-app.use('/bike', bikeRouter);
-app.use('/moto', motoRouter);
-app.use('/car', carRouter);
+app.use('/room', roomRouter);
+
 //app.use('/private', privateRouter);
 
 // 4. MANEJO DE ERRORES
