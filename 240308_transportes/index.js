@@ -12,7 +12,7 @@ const { privateRouter } = require('./src/routes/private.routes');
 const PORT = 3000;
 connectMongo();
 const app = express();
-
+app.use(express.json());
 
 
 // 3. ENDPOINTS

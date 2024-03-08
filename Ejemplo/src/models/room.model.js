@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { roomRouter } = require('../routers/room.routers');
 
 const roomSchema = new mongoose.Schema({
     type: {
@@ -11,6 +12,8 @@ const roomSchema = new mongoose.Schema({
         required: true,
     }
 })
+//roomRouter.get('/', getRoom);
+/*roomRouter.post('/', createRoom);*/
 
 const Room = mongoose.model('Room', roomSchema);
 module.exports = Room;
