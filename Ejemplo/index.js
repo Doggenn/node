@@ -4,7 +4,7 @@ const {connectMongo} = require('./utils/db')
 
 
 
-const { roomRouter } = require('./src/routers/room.routers');
+//const { roomRouter } = require('./src/routers/room.routers');
 
 
 // 2. CONFIGURACIÓN DE LA APLICACIÓN
@@ -24,7 +24,7 @@ app.get('/', (request, response) => {
     });
 });
 
-app.use('/room', roomRouter);
+//app.use('/room', roomRouter);
 
 //app.use('/private', privateRouter);
 

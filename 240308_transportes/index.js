@@ -22,7 +22,7 @@ app.get('/', (request, response) => {
     });
 });
 
-app.use('/room', roomRouter);
+//app.use('/room', roomRouter);
 //app.use('/private', privateRouter);
 
 // 4. MANEJO DE ERRORES
