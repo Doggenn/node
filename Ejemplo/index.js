@@ -1,11 +1,15 @@
 // 1. IMPORTAR LIBRERIAS O VARIABLES EXTERNAS
 const express = require('express'); // esto es un import (nos traemos código de fuera del archivo)
+const {connectMongo} = require('./utils/db')
+
+
+
 const { roomRouter } = require('./src/routers/room.routers');
 
 
 // 2. CONFIGURACIÓN DE LA APLICACIÓN
 const PORT = 3000;
-
+connectMongo();
 const app = express();
 
 
