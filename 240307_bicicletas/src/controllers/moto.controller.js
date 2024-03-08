@@ -1,4 +1,4 @@
-
+const moto = require('../models/moto.model')
 
 
 const getMoto = async (req, res, next) => {

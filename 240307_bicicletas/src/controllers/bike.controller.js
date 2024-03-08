@@ -1,4 +1,4 @@
-
+const bike = require('../models/bike.model')
 
 const getBike = async (req, res, next) => {
     res.status(200).json({

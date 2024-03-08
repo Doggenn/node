@@ -1,4 +1,4 @@
-
+const car = require('../models/car.model')
 
 
 const getCar = async (req, res, next) => {
