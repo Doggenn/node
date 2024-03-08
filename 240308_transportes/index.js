@@ -25,7 +25,7 @@ app.get('/', (request, response) => {
 app.use('/bike', bikeRouter);
 app.use('/moto', motoRouter);
 app.use('/car', carRouter);
-app.use('/private', privateRouter);
+//app.use('/private', privateRouter);
 
 // 4. MANEJO DE ERRORES
 /* MANEJO DE ERRORES */

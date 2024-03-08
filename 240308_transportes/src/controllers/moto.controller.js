@@ -4,7 +4,7 @@ const Moto = require('../models/moto.model');
 // 2. CREAR LAS FUNCIONES CRUD (GET, POST, OATCH, DELETE)
 const getMoto = async (req, res, next) => {
     //¿Que se va a consultar? -> ID
-    const _id = req.params.id;// Con esta linea obtenemos la ID
+    const _id = req.params._id;// Con esta linea obtenemos la ID
     //Consultamos la BB.DD.
     try {
         const moto = Moto.findById(_id);
