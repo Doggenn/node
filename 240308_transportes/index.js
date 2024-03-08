@@ -3,7 +3,10 @@ const express = require('express'); // esto es un import (nos traemos código de
 const {connectMongo} = require('./utils/db')
 
 
-const { roomRouter } = require('./src/routes/bike.routes');
+const { motoRouter } = require('./src/routes/moto.routes');
+const { carRouter } = require('./src/routes/car.routes');
+const { bikeRouter } = require('./src/routes/bike.routes');
+const { privateRouter } = require('./src/routes/private.routes');
 
 // 2. CONFIGURACIÓN DE LA APLICACIÓN
 const PORT = 3000;
@@ -22,8 +25,10 @@ app.get('/', (request, response) => {
     });
 });
 
-//app.use('/room', roomRouter);
-//app.use('/private', privateRouter);
+app.use('/moto', motoRouter);
+app.use('/car', carRouter);
+app.use('/bike', bikeRouter);
+
 
 // 4. MANEJO DE ERRORES
 /* MANEJO DE ERRORES */

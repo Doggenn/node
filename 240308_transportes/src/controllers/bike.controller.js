@@ -18,4 +18,18 @@ const getBike = async (req, res, next) => {
         next(error);
     }
 }
-module.exports = {getBike}
+const createBike = async (req, res, next) => {
+    try {
+        const bike = new Bike(req.body);
+        await bike.save();
+        res.status(201).json({
+            status: 201,
+            message: 'Created',
+            data: bike,
+        })
+    } catch (error) {
+        next(error);
+    }
+    /*const { bike_type, surface } = req.body;*/
+}
+module.exports = {getBike, createBike}

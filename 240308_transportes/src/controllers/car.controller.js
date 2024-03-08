@@ -18,4 +18,18 @@ const getCar = async (req, res, next) => {
         next(error);
     }
 }
-module.exports = {getCar}
+const createCar = async (req, res, next) => {
+    try {
+        const car = new Car(req.body);
+        await car.save();
+        res.status(201).json({
+            status: 201,
+            message: 'Created',
+            data: car,
+        })
+    } catch (error) {
+        next(error);
+    }
+    /*const { car_type, surface } = req.body;*/
+}
+module.exports = {getCar, createCar}
