@@ -6,20 +6,16 @@ const buildingSchema = new mongoose.Schema({
         required: true,
         trim: true,/// Sirve para que no se queden los espacios en blanco
     },
-    number: {
-        type: Number,
-        required: true,
-    },
-    letter: {
+    use: {
         type: String,
         required: true,
         trim: true,/// Sirve para que no se queden los espacios en blanco
     },
-    surface: {
+    number: {
         type: Number,
         required: true,
     },
-    rooms: [{
+    Apartments: [{
         type: mongoose.Schema.Types.ObjectId, //Esto es para hacer referencia al archivo de room.model.js para asi 
         ref: "Apartment"
     }]
