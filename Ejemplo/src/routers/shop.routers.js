@@ -8,7 +8,7 @@ const { getApartment, createApartment } = require('../controllers/apartment.cont
 
 
 apartmentRouter.get('/:_id', getApartment);
-apartmentRouter.post('/', createApartment);
+apartmentRouter.post('/:_id', createApartment);
 
 
 
