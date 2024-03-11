@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { productRouter } = require('../routers/product.routers');
+const { productRouter } = require('../routers/room.routers');
 
 const productSchema = new mongoose.Schema({
     type: {

@@ -1,5 +1,5 @@
 // 1. LLAMAR AL MODELO
-const Apartment = require('../models/shop.model');
+const Apartment = require('../models/apartment.model');
 
 // 2. CREAR LAS FUNCIONES CRUD (GET, POST, OATCH, DELETE)
 const getApartment = async (req, res, next) => {

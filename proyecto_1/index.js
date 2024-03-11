@@ -3,28 +3,27 @@ const express = require('express'); // esto es un import (nos traemos código de
 const {connectMongo} = require('./utils/db')
 
 
-const { productRouter } = require('./src/routers/room.routers');
-const { shopRouter } = require('./src/routers/apartment.routers');
+const { movieRouter } = require('./src/routers/movie.routers');
 
 // 2. CONFIGURACIÓN DE LA APLICACIÓN
 const PORT = 3000;
 connectMongo();
 const app = express();
 app.use(express.json());
+app.use(express)
 
 
 // 3. ENDPOINTS
 
 
-app.get('/:_id', (request, response) => {
+app.get('/', (request, response) => {
     response.status(200).json({
         status: 200,
-        message: "Bienvenido a mi app"
+        message: "Bienvenido a mis peliculas"
     });
 });
 
-app.use('/product', productRouter);
-app.use('/shop', shopRouter);
+app.use('/movie', movieRouter);
 
 //app.use('/private', privateRouter);
 

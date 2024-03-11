@@ -1,5 +1,5 @@
 // 1. LLAMAR AL MODELO
-const Room = require('../models/product.model');
+const Room = require('../models/room.model');
 
 // 2. CREAR LAS FUNCIONES CRUD (GET, POST, OATCH, DELETE)
 const getRoom = async (req, res, next) => {
